@@ -3,7 +3,7 @@ create database soccergame;
 use soccergame;
 
 CREATE TABLE IF NOT EXISTS teams(
-		team_name VARCHAR(20) PRIMARY KEY NOT NULL,
+		team_id INT PRIMARY KEY NOT NULL,
 		home_ground VARCHAR(20),
 		home_wins INT,
 		home_draws INT, 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS teams(
 
 create table IF NOT EXISTS players(
 		player_id int PRIMARY KEY NOT NULL,
-		team_name VARCHAR(20),
+		team_id int,
 		first_name VARCHAR(20),
 		last_name VARCHAR(20),
 		position VARCHAR(20),
@@ -28,7 +28,7 @@ create table IF NOT EXISTS players(
 		minutes_played INT,
 		yellow_cards_received INT,
 		red_cards_received INT,
-		FOREIGN KEY (team_name) REFERENCES teams(team_name)
+		FOREIGN KEY (team_id) REFERENCES teams(team_id)
         );
 
 create table IF NOT EXISTS goals_scored(
@@ -60,3 +60,15 @@ create table if not EXISTS player_match(
 		red_card INT,
         FOREIGN KEY (player_id) REFERENCES players(player_id)
         );
+
+CREATE TABLE referee(
+        id INT PRIMARY KEY NOT NULL,
+        name VARCHAR(30));
+	
+CREATE TABLE results(
+        id INT PRIMARY KEY NOT NULL,
+        team_id INT,
+        match_id INT,
+        result VARCHAR(30),
+        FOREIGN KEY(team_id) REFERENCES teams(team_id),
+        FOREIGN KEY(match_id) REFERENCES player_match(match_id));
