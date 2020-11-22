@@ -4,8 +4,7 @@
 DROP DATABASE IF EXISTS outer_space;
 
 CREATE DATABASE outer_space;
-
-\c outer_space
+use outer_space;
 
 CREATE TABLE planets
 (
