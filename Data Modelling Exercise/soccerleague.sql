@@ -40,7 +40,7 @@ create table IF NOT EXISTS goals_scored(
 		FOREIGN KEY(player_id) REFERENCES players(player_id));
 
 create table if not EXISTS fixtures(
-        recordId INT PRIMARY KEY NOT NULL,
+        season_id INT PRIMARY KEY NOT NULL,
 		game_week INT,
 		home_team VARCHAR(45),
 		away_team VARCHAR(45),
@@ -58,11 +58,14 @@ create table if not EXISTS player_match(
 		mins_played INT,
 		yellow_card INT,
 		red_card INT,
-        FOREIGN KEY (player_id) REFERENCES players(player_id)
+        referee_id INT,
+        FOREIGN KEY (referee_id) REFERENCES referee(referee_id),
+        FOREIGN KEY (player_id) REFERENCES players(player_id),
+        FOREIGN KEY(season_id) REFERENCES fixtures(season_id)
         );
 
 CREATE TABLE referee(
-        id INT PRIMARY KEY NOT NULL,
+        referee_id INT PRIMARY KEY NOT NULL,
         name VARCHAR(30));
 	
 CREATE TABLE results(
