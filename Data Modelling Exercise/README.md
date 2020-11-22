@@ -6,7 +6,7 @@
 * During a visit, a patient may be diagnosed to have one or more diseases.
 
 ## DataModel
-![Alt text](medicalERDiagram.PNG?raw=true "Medical ER Diagram")
+![Alt text](/Schema Design/Screenshot/medicalERDiagram.PNG?raw=true "Medical ER Diagram")
 
 
 ### Design a schema for Craigslist! Your schema should keep track of the following
@@ -17,7 +17,7 @@
 * Categories that each post belongs to
 
 ## DataModel
-![Alt text](craiglistER.PNG?raw=true "Craiglist ER Diagram")
+![Alt text](/Schema Design/Screenshot/craiglistER.PNG?raw=true "Craiglist ER Diagram")
 
 
 ### Design a schema for a simple sports league. Your schema should keep track of
@@ -31,4 +31,4 @@
 * The standings/rankings of each team in the league (This doesn’t have to be its own table if the data can be captured somehow).
 
 ## DataModel
-![Alt text](soccerleague.PNG?raw=true "Soccerleague ER Diagram")
+![Alt text](/Schema Design/Screenshot/soccerleague.PNG?raw=true "Soccerleague ER Diagram")
