@@ -10,7 +10,7 @@ USE music;
 CREATE TABLE artists
 ( 
     artist_id SERIAL PRIMARY KEY,
-	name VARCHAR(100)
+    name VARCHAR(100)
 );
 
 CREATE TABLE producers
@@ -44,58 +44,39 @@ CREATE TABLE album
 INSERT INTO artists
 	(name)
 VALUES
-('Hanson'),
-('Queen'),
-('Mariah Cary'),
-('Boyz II Men'),
-('Lady Gaga'),
-('Bradley Cooper'),
-('Nickelback'),
-('Jay Z'),
-('Alicia Keys'),
-('Katy Perry'),
-('Juicy J'),
-('Maroon 5'),
-('Christina Aguilera'),
-('Avril Lavigne'),
-('Destiny''s Child');
+	('Hanson'),
+	('Queen'),
+	('Mariah Cary'),
+	('Boyz II Men'),
+	('Lady Gaga'),
+	('Bradley Cooper'),
+	('Nickelback'),
+	('Jay Z'),
+	('Alicia Keys'),
+	('Katy Perry'),
+	('Juicy J'),
+	('Maroon 5'),
+	('Christina Aguilera'),
+	('Avril Lavigne'),
+	('Destiny''s Child');
 
 INSERT INTO producers
     (name)
 VALUES
-('Dust Brothers'),
-('Stephen Lironi'),
-('Roy Thomas Baker'),
-('Walter Afanasieff'),
-('Benjamin Rice'),
-('Rick Parashar'),
-('Al Shux'),
-('Max Martin'),
-('Cirkut'),
-('Shellback'),
-('Benny Blanco'),
-('The Matrix'),
-('Darkchild');
+	('Dust Brothers'),
+	('Stephen Lironi'),
+	('Roy Thomas Baker'),
+	('Walter Afanasieff'),
+	('Benjamin Rice'),
+	('Rick Parashar'),
+	('Al Shux'),
+	('Max Martin'),
+	('Cirkut'),
+	('Shellback'),
+	('Benny Blanco'),
+	('The Matrix'),
+	('Darkchild');
 
-/*INSERT INTO songs
-  (title, duration_in_seconds, release_date, artist_id)
-VALUES
-  ('MMMBop', 238, '04-15-1997', ((SELECT artist_id from artists where name='Hanson'))),
-  ('Bohemian Rhapsody', 355, '10-31-1975', ((SELECT artist_id from artists where name='Queen'))),
-  ('One Sweet Day', 282, '11-14-1995', ((SELECT artist_id from artists where name='Mariah Cary'))),
-  ('One Sweet Day', 282, '11-14-1995', ((SELECT artist_id from artists where name='Boyz II Men'))),
-  ('Shallow', 216, '09-27-2018', ((SELECT artist_id from artists where name='Lady Gaga'))),
-  ('Shallow', 216, '09-27-2018', ((SELECT artist_id from artists where name='Bradley Cooper'))),
-  ('How You Remind Me', 223, '08-21-2001', ((SELECT artist_id from artists where name='Nickelback'))),
-  ('New York State of Mind', 276, '10-20-2009', ((SELECT artist_id from artists where name='Jay Z'))),
-  ('New York State of Mind', 276, '10-20-2009', ((SELECT artist_id from artists where name='Alicia Keys'))),
-  ('Dark Horse', 215, '12-17-2013', ((SELECT artist_id from artists where name='Katy Perry'))),
-  ('Dark Horse', 215, '12-17-2013', ((SELECT artist_id from artists where name='Juicy J'))),
-  ('Moves Like Jagger', 201, '06-21-2011', ((SELECT artist_id from artists where name='Maroon 5'))),
-  ('Moves Like Jagger', 201, '06-21-2011', ((SELECT artist_id from artists where name='Christina Aguilera'))),
-  ('Complicated', 244, '05-14-2002', ((SELECT artist_id from artists where name='Avril Lavigne'))),
-  ('Say My Name', 240, '11-07-1999', ((SELECT artist_id from artists where name='Destiny''s Child')));
-*/
 
 INSERT INTO songs
   (title, duration_in_seconds, release_date)
